@@ -87,7 +87,10 @@ public class NeoChat extends JavaPlugin implements CommandExecutor, Listener {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		// TODO Auto-generated method stub
 		if(command.isRegistered() && Chat.labels.contains(label)){
-			MultiChatCommandHandler.runCommand(sender, command, label, args);
+			if(sender.hasPermission("neochat." + Chat.getNameFromLabel(label) + ".use"))
+				MultiChatCommandHandler.runCommand(sender, command, label, args);
+			else
+				sender.sendMessage(ChatColor.GRAY + "[NeoChat]" + ChatColor.RED + "You dont permission to use chat: " + Chat.getNameFromLabel(label));
 			return true;
 		}
 		

@@ -1,0 +1,26 @@
+#     NeoChat
+#New chats are made as such:
+# - 'chatName prefix command'
+# or
+# - 'chatName prefix command format'
+#
+#
+#
+# the name of the chat will determine its permission node
+# the prefix will appear in the in game chat messages.
+# the command will be the command used for in game interaction with the chat
+#  (optional) the format will be what the default chat color is for this chat. setting it to &c will cause 
+#  chat color to default to red instead of white. Leave blank for white.
+#
+#
+# Permission nodes
+#  neochat.<chatName>.use
+#  neochat.<chatName>.color
+#  neochat.<chatName>.format
+#  neochat.<chatName>.toggle
+
+
+
+chats:
+  - 'staff &8&l[&c&lStaff&8&l] sc &c'
+  - 'donor &8[&aDonor&8] dc &6'

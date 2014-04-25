@@ -1,0 +1,11 @@
+name: NeoChat
+version: 1.0.0
+author: REGAL_MACHINE
+main: me.RegalMachine.NeoChat.NeoChat
+commands:
+  color:
+    description: Shows the bukkit colors codes. /format for format codes.
+  format:
+    description: Shows the bukkit format codes. /color for color codes.
+  neochat:
+    description: Simple help command for the registered chats and other NeoChat features.

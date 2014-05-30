@@ -1,26 +1,28 @@
 #     NeoChat
-#New chats are made as such:
-# - 'chatName prefix command'
-# or
-# - 'chatName prefix command format'
-#
-#
-#
-# the name of the chat will determine its permission node
-# the prefix will appear in the in game chat messages.
-# the command will be the command used for in game interaction with the chat
-#  (optional) the format will be what the default chat color is for this chat. setting it to &c will cause 
-#  chat color to default to red instead of white. Leave blank for white.
-#
-#
-# Permission nodes
-#  neochat.<chatName>.use
-#  neochat.<chatName>.color
-#  neochat.<chatName>.format
-#  neochat.<chatName>.toggle
-
-
-
-chats:
-  - 'staff &8&l[&c&lStaff&8&l] sc &c'
-  - 'donor &8[&aDonor&8] dc &6'
+#  Permission nodes
+#    neochat.<chatName>.use Allows for Using and Seeing the chat
+#    neochat.<chatName>.see Allows for Seeing the chat
+#    neochat.<chatName>.color Allows for the parsing of color in the chat (auto-format still applied)
+#    neochat.<chatName>.format Allows or the parsing of format in the chat (auto-format still applied)
+#    neochat.<chatName>.toggle Allows the user to toggle into another chat. 
+#  chatName:
+#    command: 'command' (Required)
+#    prefix: 'something' 
+#    auto-format: 'formatting'
+#    show-names: booleanValue
+chat-channels:
+  staff:
+    command: 'sc'
+    prefix: '&8&l[&c&lStaff&8&l]'
+    auto-format: '&6'
+    show-names: true
+  donor:
+    command: 'dc'
+    prefix: '&8[&aDonor&8]'
+    auto-format: '&6'
+  announce:
+    command: 'an'
+    prefix: '&a&l[&b&lAnnouncement&a&l]'
+    auto-format: '&e&l'
+    show-names: false
+Auto-Toggle:

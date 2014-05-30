@@ -27,5 +27,5 @@ public class MCCommand extends Command{
 	public void setExecutor(CommandExecutor exe){
 		this.exe = exe;
 	}
-
+	
 }
